@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { PageDocData, BusinessRule, FlowTransition } from '../types/documenter';
+import { ScreenDescriber } from '../documenter/ScreenDescriber';
+
 
 export class DocGenerator {
   /**
@@ -96,13 +98,24 @@ export class DocGenerator {
     mdContent += `## 🖥️ Detalhamento Técnico das Telas\n\n`;
 
     pagesData.forEach((page) => {
+      const desc = ScreenDescriber.describe(page);
+
       mdContent += `### Tela: ${page.pageName}\n\n`;
       mdContent += `*   **Rota**: \`${page.path}\`\n`;
       mdContent += `*   **Título HTML da Página**: \`${page.title || 'Sem título'}\`\n`;
       mdContent += `*   **Cabeçalho Principal (H1)**: \`${page.h1 || 'Nenhum'}\`\n`;
       if (page.description) {
-        mdContent += `*   **Descrição**: *${page.description}*\n`;
+        mdContent += `*   **Descrição Técnica (Meta)**: *${page.description}*\n`;
       }
+      mdContent += `\n`;
+
+      mdContent += `#### 🎯 Objetivo e Funcionalidade da Tela\n\n`;
+      mdContent += `*   **Objetivo de Negócio**: ${desc.objective}\n`;
+      mdContent += `*   **Perfis / Papéis Recomendados**: ${desc.roles.map(r => `\`${r}\``).join(', ')}\n`;
+      mdContent += `*   **Principais Ações e Recursos Mapeados**:\n`;
+      desc.features.forEach(feat => {
+        mdContent += `    - ${feat}\n`;
+      });
       mdContent += `\n`;
 
       // Subseção: Campos de Entrada

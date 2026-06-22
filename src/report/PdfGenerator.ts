@@ -3,6 +3,7 @@ import { chromium } from 'playwright';
 import * as fs from 'fs';
 import * as path from 'path';
 import { config } from '../config/config';
+import { ScreenDescriber } from '../documenter/ScreenDescriber';
 
 export class PdfGenerator {
   /**
@@ -480,7 +481,9 @@ export class PdfGenerator {
   </div>
 
   <!-- DETALHES DE CADA TELA -->
-  ${pagesData.map(page => `
+  ${pagesData.map(page => {
+    const desc = ScreenDescriber.describe(page);
+    return `
     <div class="page" style="padding-top: 15mm;">
       <h2 class="section-title">Tela: ${this.escapeHtml(page.pageName)}</h2>
       <div class="feature-desc">Rota: ${this.escapeHtml(page.path)}</div>
@@ -488,6 +491,19 @@ export class PdfGenerator {
       <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 8.5pt;">
         <strong>Título HTML da Tela:</strong> <code>${this.escapeHtml(page.title || 'Sem título')}</code><br/>
         <strong>Cabeçalho H1:</strong> <code>${this.escapeHtml(page.h1 || 'Nenhum')}</code>
+      </div>
+
+      <!-- Descrição Funcional da Tela -->
+      <div style="margin-bottom: 20px; border: 1px solid #e2e8f0; border-left: 4px solid #7c3aed; padding: 12px 16px; border-radius: 4px; background-color: #faf5ff; page-break-inside: avoid;">
+        <h3 style="font-size: 9.5pt; font-weight: 800; color: #6b21a8; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px;">🎯 Objetivo e Funcionalidade</h3>
+        <p style="font-size: 9pt; color: #475569; margin-bottom: 8px; line-height: 1.5;">${this.escapeHtml(desc.objective)}</p>
+        <div style="font-size: 8pt; color: #64748b; margin-bottom: 8px;">
+          <strong>Perfis / Papéis de Acesso Recomendados:</strong> ${desc.roles.map(r => `<span style="background-color: #f3e8ff; color: #6b21a8; padding: 2px 6px; border-radius: 4px; font-weight: 700; margin-right: 4px; font-size: 7.5pt; display: inline-block;">${this.escapeHtml(r)}</span>`).join('')}
+        </div>
+        <strong style="font-size: 8.5pt; color: #334155; display: block; margin-top: 8px; margin-bottom: 4px;">Principais Ações e Recursos Mapeados:</strong>
+        <ul style="font-size: 8.5pt; color: #475569; padding-left: 18px; margin-bottom: 0;">
+          ${desc.features.map(f => `<li style="margin-bottom: 2px;">${this.escapeHtml(f)}</li>`).join('')}
+        </ul>
       </div>
 
       <!-- Tabela de Inputs -->
@@ -559,7 +575,8 @@ export class PdfGenerator {
         </div>
       ` : ''}
     </div>
-  `).join('')}
+  `;
+  }).join('')}
 
 </body>
 </html>`;
