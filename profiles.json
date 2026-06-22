@@ -1,0 +1,388 @@
+{
+  "alunopresente": {
+    "name": "QA Auditor Agent - Aluno Presente",
+    "baseUrl": "https://alunopresente.servicent.com.br",
+    "loginPath": "/login",
+    "loginEmail": "marcelo@usuarioadmin.com.br",
+    "loginPassword": "123",
+    "allowRegistrations": false,
+    "generateDocumentation": false,
+    "pages": [
+      {
+        "path": "/alunopresente/dashboard-unidadeEscolar",
+        "name": "Dashboard - Unidade Escolar",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-analise-diaria",
+        "name": "Dashboard - Análise Diária",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-refeitorio-diario",
+        "name": "Dashboard - Refeitório Diário",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-secretario",
+        "name": "Dashboard - Visão Secretaria",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-aluno",
+        "name": "Dashboard - Analítico Aluno",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-analitico-recorrencia",
+        "name": "Dashboard - Analítico Recorrência",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-analitico-ausencia",
+        "name": "Dashboard - Analítico Ausências",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/dashboard-analitico-atrasos",
+        "name": "Dashboard - Analítico Atrasos",
+        "requiresAuth": true
+      },
+      {
+        "path": "/alunopresente/listar-monitoramento-fotos",
+        "name": "Dashboard - Monitoramento Fotos",
+        "requiresAuth": true
+      },
+      {
+        "path": "/mapa/situacao-operacional",
+        "name": "Dashboard - Situação Operacional",
+        "requiresAuth": true
+      },
+      {
+        "path": "/mapa/acompanhamento-operacional",
+        "name": "Acompanhamento Operacional",
+        "requiresAuth": true
+      },
+      {
+        "path": "/relatorios/evolucao-fotos",
+        "name": "Relatório - Evolução de fotos",
+        "requiresAuth": true
+      },
+      {
+        "path": "/relatorios/evolucao-mensal",
+        "name": "Relatório - Evolução Mensal",
+        "requiresAuth": true
+      }
+    ],
+    "contexts": {
+      "list": [
+        "EMEB CONSTANCA FIGUEIREDO PALMA BEM BEM",
+        "EMEB MINISTRO MARCOS FREIRE"
+      ]
+    },
+    "rules": [],
+    "discoveredTables": [
+      {
+        "pagePath": "/alunopresente/dashboard-analise-diaria",
+        "selector": "table.ti-custom-table",
+        "columns": [
+          "Turma",
+          "Série",
+          "Presentes",
+          "%"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-analise-diaria",
+        "selector": "table.ti-custom-table",
+        "columns": [
+          "Aluno",
+          "Turma",
+          "Série"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-analise-diaria",
+        "selector": "table.ti-custom-table",
+        "columns": [
+          "Aluno",
+          "Turma",
+          "Série"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-refeitorio-diario",
+        "selector": "table.w-full",
+        "columns": [
+          "Aluno",
+          "Horário",
+          "Turma & Série",
+          "Intervalo"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-refeitorio-diario",
+        "selector": "table.w-full",
+        "columns": [
+          "Turma",
+          "Alim. / Não Alim.",
+          "Adesão"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-refeitorio-diario",
+        "selector": "table.w-full",
+        "columns": [
+          "Dia",
+          "Presentes",
+          "Alimentados",
+          "% Alimentados"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-analitico-ausencia",
+        "selector": "table.w-full",
+        "columns": [
+          "Aluno",
+          "Turma",
+          "Dias de Ausência",
+          "% Ausência"
+        ]
+      },
+      {
+        "pagePath": "/mapa/situacao-operacional",
+        "selector": "table.w-full",
+        "columns": [
+          "Turma",
+          "Presentes",
+          "Frequência"
+        ]
+      },
+      {
+        "pagePath": "/mapa/acompanhamento-operacional",
+        "selector": "table.w-full",
+        "columns": [
+          "Turma",
+          "Presentes",
+          "Frequência"
+        ]
+      },
+      {
+        "pagePath": "/relatorios/evolucao-fotos",
+        "selector": "table.w-full",
+        "columns": [
+          "Unidade de Ensino",
+          "Total Alunos",
+          "Fotos Tiradas",
+          "Fotos Faltantes",
+          "Fotos com Falha",
+          "▶ EMEB MINISTRO MARCOS FREIRE ID Unidade: N/A  2 registros",
+          "▶ CEIC SAO JOSE OPERARIO ID Unidade: N/A  3 registros",
+          "▶ EMEB LIBERDADE ID Unidade: N/A  2 registros",
+          "▶ EMEB PROFA ALZIRA VALLADARES ID Unidade: N/A  2 registros",
+          "▶ EMEB MARIA TOMICH MONTEIRO DA SILVA ID Unidade: N/A  2 registros",
+          "▶ CEIC PLACIDO FLAVIANO CURVO FILHO ID Unidade: N/A  1 registro",
+          "▶ CEIC SILVA FREIRE ID Unidade: N/A  1 registro",
+          "▶ CEIC RISOLETA NEVES ID Unidade: N/A  1 registro",
+          "▶ EMEB EUGENIA PEREIRA DE MELLO ID Unidade: N/A  2 registros",
+          "▶ CEIC SAO MATHEUS ID Unidade: N/A  1 registro",
+          "▶ CEIC JOSE NICOLAU PINTO ID Unidade: N/A  1 registro",
+          "▶ ASSOCIACAO DONA ALICE RODRIGUES DOS SANTOS CRECHE LEAOZINHO ID Unidade: N/A  1 registro",
+          "▶ CMEI PROFA ADY DE FIGUEIREDO MATTOS ID Unidade: N/A  3 registros",
+          "▶ CMEI EDGAR SANTANA DE AMORIM ID Unidade: N/A  3 registros",
+          "▶ CEIC MARIA FIGUEIREDO NUNES ID Unidade: N/A  1 registro",
+          "▶ EMEB DEP ULISSES SILVEIRA GUIMARAES ID Unidade: N/A  2 registros",
+          "▶ CEIC LELITA LINO DA SILVA ID Unidade: N/A  1 registro",
+          "▶ EMEB MARIA DA GLORIA DE SOUZA ID Unidade: N/A  2 registros",
+          "▶ CMEI PROFA MARILIA INES PEDROLLO SALOMONI ID Unidade: N/A  3 registros",
+          "▶ CMEI CORONEL JOSE MEIRELLES ID Unidade: N/A  3 registros",
+          "▶ CRECHE ESTRELINHA DE JESUS ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF ZEFERINO LEITE DE OLIVEIRA ID Unidade: N/A  2 registros",
+          "▶ CMEI VEREADOR JULIO CESAR PINHEIRO ID Unidade: N/A  1 registro",
+          "▶ EMEB GLAUCIA MARIA BORGES GARCIA ID Unidade: N/A  2 registros",
+          "▶ CEIC SANTA CLARA ID Unidade: N/A  1 registro",
+          "▶ EMEB CELINA FIALHO BEZERRA ID Unidade: N/A  2 registros",
+          "▶ EMEB PROF EZEQUIEL POMPEU RIBEIRO DE SIQUEIRA ID Unidade: N/A  2 registros",
+          "▶ EMEB MADRE MARTA CERUTTI ID Unidade: N/A  2 registros",
+          "▶ CEIC INOCENCIO LEOCADIO DA ROSA ID Unidade: N/A  1 registro",
+          "▶ CEIC ALE GUILHERME ARFUX DA COSTA RIBEIRO ID Unidade: N/A  1 registro",
+          "▶ CEIC LAIS AMICUCCI SOARES MARTINS ID Unidade: N/A  1 registro",
+          "▶ EMEB ANTONIA TITA MACIEL DE CAMPOS ID Unidade: N/A  2 registros",
+          "▶ EMEB SANTA CECILIA ID Unidade: N/A  2 registros",
+          "▶  EMEB SENHORINHA ANA ALVES DE OLIVEIRA ID Unidade: N/A  2 registros",
+          "▶ EMEB DEJANI RIBEIRO CAMPOS ID Unidade: N/A  2 registros",
+          "▶ EMEB PROF FRANCISVAL DE BRITO ID Unidade: N/A  2 registros",
+          "▶ EMEB NOSSA SENHORA APARECIDA ID Unidade: N/A  2 registros",
+          "▶ CMEI MARIA CONCEICAO OLIVEIRA DE SOUZA ID Unidade: N/A  3 registros",
+          "▶ ASSOCIACAO FILANTROPICA SAO JUDAS TADEU ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFA JOANA DARK DA SILVA ID Unidade: N/A  2 registros",
+          "▶ EMEB 8 DE ABRIL LISALDO FARIAS SODRE ID Unidade: N/A  2 registros",
+          "▶ CMEI PAULO RONAN FERRAZ SANTOS ID Unidade: N/A  3 registros",
+          "▶ EMEBC PROF UDENEY GONCALVES DE AMORIM ID Unidade: N/A  3 registros",
+          "▶ CMEI PREFEITO DANTE MARTINS DE OLIVEIRA ID Unidade: N/A  3 registros",
+          "▶ EMEB DOM BOSCO DO PRAEIRINHO ID Unidade: N/A  2 registros",
+          "▶ CEIC PROFESSOR AECIM TOCANTINS ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF FILOGONIO CORREA ID Unidade: N/A  2 registros",
+          "▶ EMEB PROFA LIDIOLIRIA SANTANA ID Unidade: N/A  2 registros",
+          "▶ EMEB ESMERALDA DE CAMPOS FONTES ID Unidade: N/A  2 registros",
+          "▶ CEIC JOSE LUIZ BORGES GARCIA ID Unidade: N/A  1 registro",
+          "▶ EMEB QUINTINO PEREIRA DE FREITAS ID Unidade: N/A  2 registros",
+          "▶ EMEB SENADOR GASTAO DE MATTOS MULLER ID Unidade: N/A  2 registros",
+          "▶ CEIC SEBASTIAO TOLOMEU ID Unidade: N/A  1 registro",
+          "▶ EMEB AGOSTINHO S DE FIGUEIREDO ID Unidade: N/A  1 registro",
+          "▶ EMEBC PROFA HILDA CAETANO DE OLIVEIRA LEITE ID Unidade: N/A  2 registros",
+          "▶ CMEI ENGENHEIRO OSCAR AMELITO ID Unidade: N/A  3 registros",
+          "▶ EMEB PROFA RITA CALDAS CASTRILLON ID Unidade: N/A  2 registros",
+          "▶ CMEI MANOEL DE BARROS ID Unidade: N/A  3 registros",
+          "▶ EMEB PROF RANULPHO PAES DE BARROS ID Unidade: N/A  2 registros",
+          "▶ CMEI PROFA ALIANE FATIMA RODRIGUES ID Unidade: N/A  3 registros",
+          "▶ EMEBC PROFA BENEDITA XAVIER RODRIGUES ID Unidade: N/A  2 registros",
+          "▶ ESCOLA ESPIRITA IRMAO PRAEIRO ID Unidade: N/A  1 registro",
+          "▶ EMEBC NOSSA SENHORA DA PENHA DE FRANCA ID Unidade: N/A  2 registros",
+          "▶ EMEBC NOVO RENASCER ID Unidade: N/A  2 registros",
+          "▶ EMEBC NOVA ESPERANCA ID Unidade: N/A  2 registros",
+          "▶ EMEB OSMAR JOSE DO CARMO CABRAL ID Unidade: N/A  2 registros",
+          "▶ EMEB PROFA PEDROSA MORAIS E SILVA ID Unidade: N/A  2 registros",
+          "▶ CEIC LUCIENE FERREIRA DE OLIVEIRA - JARDIM UMUARAMA II ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF FIRMO JOSE RODRIGUES ID Unidade: N/A  2 registros",
+          "▶ CEIC PADRE ARMANDO CAVALLO ID Unidade: N/A  1 registro",
+          "▶ IPH PAPA JOAO XXIII CRECHE IRMA HYLDA AYDIL BODSTEIN ID Unidade: N/A  1 registro",
+          "▶ CEIC MACARIA MILITONA DE SANTANA ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFA GUILHERMINA DE FIGUEIREDO ID Unidade: N/A  2 registros",
+          "▶ EMEB SAO JOAO BOSCO ID Unidade: N/A  2 registros",
+          "▶ CEIC COLOMBA CACELIA LOMBARDI DORILEO ID Unidade: N/A  1 registro",
+          "▶ CEIC BENEDITA DIAS EVANGELISTA ID Unidade: N/A  1 registro",
+          "▶ EMEB DR ORLANDO NIGRO ID Unidade: N/A  2 registros",
+          "▶ CMEI AURO IDA ID Unidade: N/A  2 registros",
+          "▶ CEIC TERTULIANA MARIA DE ARRUDA SOUZA - MÃE NHARA ID Unidade: N/A  1 registro",
+          "▶ EMEB AUGUSTO MARIO VIEIRA ID Unidade: N/A  3 registros",
+          "▶ CRECHE COMUNITARIA MENINO JESUS ID Unidade: N/A  1 registro",
+          "▶ CMEI NEVIO LOTUFO ID Unidade: N/A  3 registros",
+          "▶ EMEB PROFA MARIA DIMPINA LOBO DUARTE ID Unidade: N/A  2 registros",
+          "▶ CEIC ESPACO LIVRE ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF LENINE DE CAMPOS POVOAS ID Unidade: N/A  2 registros",
+          "▶ CMEI ANTONIO BATISTA CRUZ ID Unidade: N/A  3 registros",
+          "▶ CEEI PORTAL DA FE ID Unidade: N/A  3 registros",
+          "▶ EMEB MAXIMIANO ARCANJO DA CRUZ ID Unidade: N/A  2 registros",
+          "▶ EMEB 12 DE OUTUBRO ID Unidade: N/A  2 registros",
+          "▶ CEIC SANTA INES ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFESSOR RAFAEL RUEDA ID Unidade: N/A  2 registros",
+          "▶ CEIC MARIA NERY BATISTA RIBEIRO ID Unidade: N/A  1 registro",
+          "▶ EMEB FLORIANO BOCHENEKI ID Unidade: N/A  2 registros",
+          "▶ CEIC DONA MICAELA HENRIQUE DE SOUZA LIMA ID Unidade: N/A  1 registro",
+          "▶ CEIC MARIA EUNICE DUARTE BARROS CENTRO POLITICO ID Unidade: N/A  3 registros",
+          "▶ EMEB PROFESSOR ONOFRE DE OLIVEIRA ID Unidade: N/A  2 registros",
+          "▶ EMEBC HERBERT DE SOUZA ID Unidade: N/A  2 registros",
+          "▶ ESCOLA ESPIRITA VIANNA DE CARVALHO ID Unidade: N/A  2 registros",
+          "▶ EMEB JOSE TORQUATO DA SILVA ID Unidade: N/A  2 registros",
+          "▶ EMEB JESUS CRIANCA ID Unidade: N/A  2 registros",
+          "▶ CRECHE CRIANCA FELIZ ID Unidade: N/A  1 registro",
+          "▶ CEIC JOSEFA CATARINA DE ALMEIDA ID Unidade: N/A  1 registro",
+          "▶ CEIC FRANCISCO SANTANA ID Unidade: N/A  1 registro",
+          "▶ EMEB TEN OCTACILIO SEBASTIAO DA CRUZ ID Unidade: N/A  2 registros",
+          "▶ CEIC ROSANGELA CAMPOS ID Unidade: N/A  1 registro",
+          "▶ EMEB SILVINO LEITE DE ARRUDA ID Unidade: N/A  2 registros",
+          "▶ EMEB PRES TANCREDO DE ALMEIDA NEVES ID Unidade: N/A  2 registros",
+          "▶ CMEI REGINA PIA PADILLA DE BORBON NEVES ID Unidade: N/A  3 registros",
+          "▶ CEIC AMALIA CURVO DE CAMPOS ID Unidade: N/A  1 registro",
+          "▶ EMEB ANA TERESA ARCOS KRAUSE ID Unidade: N/A  2 registros",
+          "▶ CMEI JOANA MONT SERRAT SPINDOLA SILVA ID Unidade: N/A  3 registros",
+          "▶ EMEB JOSE LUIS BORGES GARCIA ID Unidade: N/A  2 registros",
+          "▶ EMEB SENADOR DARCY RIBEIRO ID Unidade: N/A  1 registro",
+          "▶ CEIC PROFESSOR RAFAEL RUEDA ID Unidade: N/A  1 registro",
+          "▶ CEIC ALTOS DA GLORIA ID Unidade: N/A  1 registro",
+          "▶ EMEB JUAREZ SODRE FARIAS ID Unidade: N/A  2 registros",
+          "▶ EMEB JESCELINO JOSE REINERS ID Unidade: N/A  2 registros",
+          "▶ EMEB ADELINA PEREIRA VENTURA ID Unidade: N/A  2 registros",
+          "▶ CMEI JORNALISTA MARCOS COUTINHO ID Unidade: N/A  3 registros",
+          "▶ CEIC WILMON FERREIRA DE SOUZA ID Unidade: N/A  1 registro",
+          "▶ EMEB IRMA MARIA BETTY DE SOUZA PIRES ID Unidade: N/A  2 registros",
+          "▶ CEIC PROFA MONSERAT ISMENIA DE MORAES BORGES ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFA GRACILDES MELO DANTAS ID Unidade: N/A  2 registros",
+          "▶ EMEB SAO SEBASTIAO ID Unidade: N/A  2 registros",
+          "▶ EMEB PROFA FRANCISCA FIGUEIREDO ARRUDA MARTINS ID Unidade: N/A  1 registro",
+          "▶ EMEB CLOVIS HUGUENEY NETO ID Unidade: N/A  2 registros",
+          "▶ CEIC CLOVIS DIAS FERREIRA ID Unidade: N/A  1 registro",
+          "▶ EMEB JEAN CARLOS PINHO SANTOS ID Unidade: N/A  2 registros",
+          "▶ EMEB CEL OCTAYDE JORGE DA SILVA ID Unidade: N/A  2 registros",
+          "▶ CEIC LUCILA FERREIRA FORTES ID Unidade: N/A  1 registro",
+          "▶ EMEB VEREADOR PAULO DE CAMPOS BORGES ID Unidade: N/A  2 registros",
+          "▶ EMEB SILVA FREIRE ID Unidade: N/A  2 registros",
+          "▶ EMEB PADRE RAIMUNDO CONCEICAO POMBO MOREIRA DA CRUZ ID Unidade: N/A  2 registros",
+          "▶ EMEB MOACYR GRATIDIANO DORILEO ID Unidade: N/A  2 registros",
+          "▶ EMEB MAL CANDIDO MARIANO DA SILVA RONDON ID Unidade: N/A  2 registros",
+          "▶ EMEB FRANCISCO PEDROSO DA SILVA ID Unidade: N/A  2 registros",
+          "▶ EMEB MARIA EUNICE DUARTE BARROS SANTA IZABEL ID Unidade: N/A  2 registros",
+          "▶ EMEB HENRIQUE DA SILVA PRADO ID Unidade: N/A  2 registros",
+          "▶ EMEB MARIA ELAZIR CORREA DE FIGUEIREDO ID Unidade: N/A  2 registros",
+          "▶ CMEI DR LEONEL DE MOURA BRIZOLA ID Unidade: N/A  2 registros",
+          "▶ EMEB CONSTANCA FIGUEIREDO PALMA BEM BEM ID Unidade: N/A  2 registros",
+          "▶ CEIC JOAO BATISTA SCALABRINI ID Unidade: N/A  1 registro",
+          "▶ CEIC SANTA INES POCAO ID Unidade: N/A  2 registros",
+          "▶ EMEB DR FABIO FIRMINO LEITE ID Unidade: N/A  2 registros",
+          "▶ CEIC MARIA BENEDITA MARTINS DE OLIVEIRA ID Unidade: N/A  1 registro",
+          "▶ CEIC JOSEFA DA SILVA PARENTE ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF CARLOS ALBERTO REYES MALDONADO ID Unidade: N/A  2 registros",
+          "▶ EMEB ANA LUIZA PRADO BASTOS ID Unidade: N/A  2 registros",
+          "▶ CRECHE FILANTROPICA BOA VONTADE ID Unidade: N/A  1 registro",
+          "▶ CEIC SAO BENEDITO ID Unidade: N/A  1 registro",
+          "▶ ESCOLA SUPERAR ID Unidade: N/A  1 registro",
+          "▶ CEIC MARIANA FERNANDES MACEDO ID Unidade: N/A  1 registro",
+          "▶ CEIC CAIC ELDORADO ID Unidade: N/A  1 registro",
+          "▶ EMEB MARIA LUCILA DA SILVA BARROS ID Unidade: N/A  2 registros",
+          "▶ EMEBC DR ESTEVAO ALVES CORREA ID Unidade: N/A  2 registros",
+          "▶ CMEI SERGIO LUIZ FERREIRA DA SILVA ID Unidade: N/A  3 registros",
+          "▶ CEIC HELENITA PAES DE ASSUNCAO ID Unidade: N/A  1 registro",
+          "▶ CLUBE DE MAES RAIO DE SOL E CRECHE COMUNITARIA TIA ANTONINA ID Unidade: N/A  1 registro",
+          "▶ CRECHE MUN PROF JOAO CRISOSTOMO DE FIGUEIREDO ID Unidade: N/A  1 registro",
+          "▶ CEIC MARIUZA DO CARMO OJEDA DE BARROS ID Unidade: N/A  1 registro",
+          "▶ CMEI GOVERNADOR JOSE GARCIA NETO ID Unidade: N/A  3 registros",
+          "▶ CEIC MARIA LIGIA BORGES GARCIA ID Unidade: N/A  1 registro",
+          "▶ CMEI JORNALISTA PAULO MARIA FERREIRA LEITE ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFA ELZA LUIZA ESTEVES ID Unidade: N/A  2 registros",
+          "▶ EMEB PROFA MARIA AMBROSIO POMMOT ID Unidade: N/A  2 registros",
+          "▶ EMEB ARISTOTELINO ALVES PRAEIRO ID Unidade: N/A  2 registros",
+          "▶ CEIC ELZIRA CAVALCANTE DA SILVA ID Unidade: N/A  1 registro",
+          "▶ CEIC RENISEA GUILHERMETT BARUA ID Unidade: N/A  1 registro",
+          "▶ EMEB TEREZA BENGUELA ID Unidade: N/A  2 registros",
+          "▶ CMEI ANTONIO MARCOS RUZZENE BALBINO ID Unidade: N/A  3 registros",
+          "▶ CEIC JAMIL BOUTROS NADAF ID Unidade: N/A  1 registro",
+          "▶ CEIC NASLA JOAQUIM ASCHAR ID Unidade: N/A  3 registros",
+          "▶ CEIC MANOELINO DE JESUS ID Unidade: N/A  1 registro",
+          "▶ CEIC EDNA CATHARINA PERRI RICCI ID Unidade: N/A  1 registro",
+          "▶ EMEB ORZINA DE AMORIM SOARES ID Unidade: N/A  2 registros",
+          "▶ ESCOLA ESPIRITA YVONNE AMARAL PEREIRA ID Unidade: N/A  1 registro",
+          "▶ CEIC NAIDES RODRIGUES RIBEIRO DA CRUZ ID Unidade: N/A  3 registros",
+          "▶ CEIC JOSE GABRIEL DA COSTA ID Unidade: N/A  1 registro",
+          "▶ EMEB PROF HELIO SOUZA VIEIRA ID Unidade: N/A  2 registros",
+          "▶ CEIC SAO FRANCISCO DE ASSIS ID Unidade: N/A  1 registro",
+          "▶ CMEI PROFA JAIRA CUIABANO CORREA DA COSTA ID Unidade: N/A  3 registros",
+          "▶ CEIC MARECHAL RONDON ID Unidade: N/A  1 registro",
+          "▶ EMEB PROFA TEREZA LOBO ID Unidade: N/A  2 registros",
+          "▶ EMEB ANTONIO FERREIRA VALENTIM ID Unidade: N/A  2 registros"
+        ]
+      },
+      {
+        "pagePath": "/relatorios/evolucao-mensal",
+        "selector": "table.turmas-table",
+        "columns": [
+          "Código",
+          "Descrição",
+          "Matriz",
+          "Período",
+          "Status",
+          "Opção"
+        ]
+      },
+      {
+        "pagePath": "/alunopresente/dashboard-unidadeEscolar",
+        "selector": "table.w-full",
+        "columns": [
+          "Turma",
+          "Presentes",
+          "Frequência"
+        ]
+      }
+    ]
+  }
+}

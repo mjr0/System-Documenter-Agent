@@ -1,0 +1,38 @@
+{
+  "name": "system-documenter-agent",
+  "version": "1.0.0",
+  "description": "System Documenter Agent - Documentação automática de telas, fluxogramas e regras de negócio",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "document": "tsc && node dist/index.js",
+    "document:headed": "tsc && node dist/index.js --headed",
+    "document:pages": "tsc && node dist/index.js --pages",
+    "server": "tsc && node dist/server.js",
+    "dev:server": "ts-node src/server.ts"
+  },
+  "keywords": [
+    "auditoria",
+    "teste",
+    "erp",
+    "qa-auditor-agent"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.61.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "pdf-parse": "^2.4.5",
+    "playwright": "^1.61.0",
+    "puppeteer-core": "^25.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
+  }
+}

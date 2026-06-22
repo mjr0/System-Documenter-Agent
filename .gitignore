@@ -1,0 +1,9 @@
+node_modules/
+dist/
+reports/
+screenshots/
+scratch/
+relatorio_auditoria.pdf
+evidencias_usuario.txt
+.env
+*.log

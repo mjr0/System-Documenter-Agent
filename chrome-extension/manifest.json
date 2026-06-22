@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "System Documenter Agent",
+  "version": "1.0",
+  "description": "Mapeie e documente automaticamente as telas, formulários e fluxogramas do sistema através do System Documenter Agent.",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:3001/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
